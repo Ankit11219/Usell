@@ -1,0 +1,44 @@
+<% include header %>    
+<% include nav %>    
+<% include slider %>        
+    
+	<div id="page">
+		<div id="content">
+			<div class="box">
+					<h2 style="color:orangered"><%= result %></h2>
+					<br/>
+					
+				<h2>Forget Password</h2>
+							   
+				<form method="POST" action="/forgetpass">
+                    <table  cellspacing='10'>
+                        <tr>
+                            <td>Username(Email ID)</td>
+                            <td>
+                            <input type="text" name="unm" />    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                               <input type="submit" name="s" value="submit" style="margin: 5% 25%;padding: 8px 25px;background-color: rgb(66,139,202);border-radius: 10%"/>     
+                            </td>
+                        </tr>
+                       
+                    </table>        
+                </form>
+
+
+                        </div>
+		</div>
+		<% include sidebar %>
+		<br class="clearfix" />
+	</div>
+    
+    
+<% include footer %>        
+    
+    
+    
+    
+    
+    

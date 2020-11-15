@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Usell.com</title>
+<link href="images/logo.png" rel="icon" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#example').DataTable();
+});
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+                    <h1><a href="#"><font color="yellowgreen">Usell</font><font color="orange">.com</font></a></h1>
+		</div>
+		<div id="slogan">
+			<h2>Buy & Sell Anything....</h2>
+		</div>
+	</div>
+    
+<% include adminnav %>            
+	<div id="page">
+		<div>
+			<div class="box">
+                <h2>Manage Post</h2>     
+              <form method="POST" action="/admin/managepost">  
+             <table id="example" class="display" style="width:100%; text-align: center;">
+                    <thead>
+                        <tr>
+                                <th>Reg_Id</th>
+                                <th>Email</th>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>Mobile</th>
+                                <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            
+                                <% for(i in data1) { %>
+                                    <tr>
+                                   <td><%=data1[i].regid%></td>
+                                    <td><%=data1[i].email%></td>
+                                    <td><%=data1[i].title%></td>
+                                    <td><%=data1[i].price%></td>
+                                    <td><%=data1[i].address%></td>
+                                    <td><%=data1[i].city%></td>
+                                    <td><%=data1[i].mob%></td>
+                                    <td><button type="submit" style="background-color: red" name="s" value="<%=data1[i].title%>">Delete</button></td>
+
+                                </tr>
+                                <% } %>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                <th>Reg_Id</th>
+                                <th>Email</th>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>Mobile</th>
+                                <th>Delete</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        </form>
+                        </div>
+		</div>
+		<br class="clearfix" />
+	</div>
+    
+    
+<% include footer %>        
+    
+    
+    
+    
+    
+    

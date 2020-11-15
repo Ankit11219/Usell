@@ -1,0 +1,49 @@
+<% include header %>    
+<% include adminnav %>    
+<% include slider %>        
+    
+	<div id="page">
+		<div id="content">
+			<div class="box">
+					<h2 style="color:orangered"><%= result %></h2>
+					<br/>
+					
+				<h2>Change Password</h2>
+							   
+				<form method="POST" action="/login">
+                    <table  cellspacing='10'>
+                        <tr>
+                            <td>Username(Email ID)</td>
+                            <td>
+                            <input type="text" name="unm" />    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                            <input type="password" name="pass" />    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                               <input type="submit" name="s" value="Login" />     
+                            </td>
+                        </tr>
+                    </table>        
+                </form>
+
+
+                        </div>
+		</div>
+		<% include sidebar %>
+		<br class="clearfix" />
+	</div>
+    
+    
+<% include footer %>        
+    
+    
+    
+    
+    
+    

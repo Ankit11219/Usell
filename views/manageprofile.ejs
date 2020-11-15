@@ -1,0 +1,104 @@
+<% include header %>    
+<% include usernav %>    
+<% include slider %>        
+    
+	<div id="page">
+		<div id="content">
+			<div class="box">
+                <h2 style="color:orangered"><%= result %></h2>
+                <br/>
+                
+                <h2>Manage Profile</h2>
+                <form method="POST" action="/users/manageprofile">
+                    <table  cellspacing='10'>
+                        <tr>
+                            <td>Name</td>
+                            <td>
+                            <input type="text" name="nm" value="<%= userProfile[0].nm %>"/>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Old Password</td>
+                            <td>
+                            <input type="text" id="pass" value="<%= userProfile[0].pass %>"/>    
+                            </td>
+                            <td><span id="pdisplay"></span></td>
+                        </tr>
+                        <tr>
+                            <td>New Password</td>
+                            <td>
+                                <input type="text" id="rpass" name="pass" placeholder="New password" value="<%= userProfile[0].pass %>">
+                            
+                            </td>
+                                <td><span id="rdisplay"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>
+                            <textarea name="address" rows="5" cols="18" ><%= userProfile[0].address %></textarea>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phone no.</td>
+                            <td>
+                            <input type="text" name="mob" value="<%= userProfile[0].mob %>" />    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>
+                            <select name="state">
+                                <option><%= userProfile[0].state %></option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chhattisgarh</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jammu & Kashmir</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Telangana</option>
+                                <option>Tripura</option>
+                                <option>Uttarakhand</option>
+                                <option>Uttar Pradesh</option>
+                                <option>West Bengal</option>
+                            </select>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                               <input type="submit" name="s" value="Update"/>     
+                            </td>
+                        </tr>
+                    </table>        
+                </form>
+
+                </div>
+		</div>
+		<% include sidebar %>
+		<br class="clearfix" />
+	</div>
+    
+<% include footer %>        
+    
+    
+    
+    
+    
+    
